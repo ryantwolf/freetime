@@ -6,10 +6,10 @@ mkdir -p isodir
 mkdir -p isodir/boot
 mkdir -p isodir/boot/grub
 
-cp sysroot/boot/myos.kernel isodir/boot/myos.kernel
+cp sysroot/boot/freetime.kernel isodir/boot/freetime.kernel
 cat > isodir/boot/grub/grub.cfg << EOF
-menuentry "myos" {
-	multiboot /boot/myos.kernel
+menuentry "freetime" {
+	multiboot /boot/freetime.kernel
 }
 EOF
-grub-mkrescue -o myos.iso isodir
+grub-mkrescue -o freetime.iso isodir
